@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            My page.
+        </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+
+<!--body-->
+
+    <body>
+<div class="container" role="main">
+
+ <div class="grid-container">
+  <div class="item1" role="banner" aria-label="Site Header">
+    <h1>Best page in the world!</h1>
+    <h2>Welcome!</h2>
+  </div>
+
+  <div class="item2" role="navigation" aria-label="Main Navigation">
+    <button class="hamburger" aria-label="Open navigation" aria-controls="mainNav" aria-expanded="false" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav>
+        <ul id="mainNav">
+            <li><a href="#" aria-current="page">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="#name">Contact</a></li>
+        </ul>
+    </nav>    
+</div>
+
+  <div class="item3" aria-labelledby="about-heading">
+<article>
+    <h2 id="about-heading">About me</h2>
+    <p>
+      This page is dedicated to sharing useful resources, tutorials, and information about programming, technology, and more. We aim to help learners and professionals alike with curated content and a welcoming community.
+    </p>
+</article>
+<p>Please leave your review.</p>
+<p>We value your feedback.</p>
+    <textarea id="userInput" rows="4" cols="50" placeholder="Enter your review here..." aria-label="Review"></textarea>
+    <br>
+    <button onclick="addReview()" aria-label="Submit review">Submit review</button>
+    <span id="review">
+    </span><br/>
+    </p>
+  </div>  
+
+  <div class="item4" role="navigation" aria-label="Resource Links">
+<na>
+    <ul>
+        <li><a href="https://stackoverflow.com/questions/16910265/adding-link-a-href-to-an-element-using-css">Link 1</a></li>
+        <li><a href="https://camunda.com/blog/2023/09/what-is-rest-api-in-java-guide-with-examples/">Link 2</a></li>
+        <li><a href="https://www.docker.com/resources/what-container/">Link 3</a></li>
+        <li><a href="https://github.com/ibm-developer-skills-network/flgsb-oop-additional-practice/blob/main/OOPs/Module%205/Calculate%20the%20difference%20between%20two%20dates/TravelPlanner.java">Link 4</a></li>
+    </ul>
+</na>
+  </div>
+
+  <div class="item6">
+    <section class="contact-section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact Us</h2>
+        <form id="contactForm" aria-label="Contact form">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required aria-required="true"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required aria-required="true"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required aria-required="true"></textarea><br>
+            <button type="submit" aria-label="Send message">Send</button>
+        </form>
+        <div id="contactResult" aria-live="polite"></div>
+    </section>
+  </div>
+
+  <div class="item7" aria-labelledby="skills-heading">
+    <h2 id="skills-heading">My skills</h2>
+    <ul>
+        <li>Java</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>HTML & CSS</li>
+        <li>SQL</li>
+        <li>Docker</li>
+        <li>REST APIs</li>
+    </ul>    
+    </div>
+
+  <div class="item5">
+    <footer role="contentinfo" aria-label="Site Footer">
+        <p>© 2025 My Page. All rights reserved.</p>
+        <p>Follow us on:
+            <a href="https://www.facebook.com/">Facebook</a> |
+            <a href="https://twitter.com/">Twitter</a> |
+            <a href="https://www.instagram.com/">Instagram</a>
+        </p>
+    </footer> 
+ </div>
+</div>
+
+
+</div>
+
+<script src="script.js"></script>
+
+    </body>
+
+</html>
