@@ -1,292 +1,210 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
 .item1 { grid-area: header; }
 .item2 { grid-area: menu; }
 .item3 { grid-area: main; }
 .item4 { grid-area: links; }
-.item5 { grid-area: footer; }
-.item6 {grid-area: left;}
-.item7 {grid-area: right;}
-
-
+.item5 { grid-area: left; }
+.item6 {grid-area: right;}
+.item7 {grid-area: footer;}
 
 .grid-container {
   display: grid;
-  grid-template-areas:
-  'menu header header header header links'
-  'left main main main main right'
-  'left main main main main right'
- 'footer footer footer footer footer footer';
-  grid grid-template-columns: width: 1fr 2fr 0.8fr;
-  grid -template-rows: auto 1fr auto;
-  
-  grid-gap: 10px;
-  background-color: #2196F3;
-  background-image: url('https://images.stockcake.com/public/6/a/7/6a7fe5b1-6714-4045-b5bc-b80dec6936a6_large/sleepy-puppy-pair-stockcake.jpg');
+  grid-template-areas: 
+    "menu header header"
+    "left main links"
+    "left main right"
+    "footer footer footer";
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  width: 100vw;
+  height: 100vh;
+  gap: 10px;
+  background-image: url("59002467-cute-dog-wallpaper-4k-cute-cat-cute.jpg");
   opacity: 0.8;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 10px;
 }
 
 .grid-container > div {
+justify-items: center;
+align-items: center;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.grid-container > .item2 ul {
   
-  background-blend-mode: hue;
-  text-align: center;
-  margin 5px;
-  padding: 50px;
-  font-size: 30px;
-}
-.grid-container > div h1 {
-  font-style: italic;
-  font-size: 1em;
-  margin: 5px;
-}
-.grid-container > div h2 {
-  font-size: 0.8em;
-  margin: 5px;
+  list-style: none;
+ 
 }
 
-.grid-container > .item1 {
-  font-size: 2em;
-  padding: 28px 0 8px 0;
-}
-
-.grid-container > .item2 {
-  font-size: 1em;
-  margin: 0px;
-  padding: 15px 0 8px 0;
-  justify-self: start;   /* Aligns the item to the left in the grid */
-  text-align: left;      /* Aligns the content inside to the left */
-}
 .grid-container > .item3 {
-  background: rgba(255, 255, 255, 0.5); /* Light background with some transparency */
-  border-radius: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-}
-.grid-container > .item4 {
-  font-size: 1em;
-  margin: 0px;
-  padding: 15px 0 8px 0;
-  justify-self: flex-end;   /* Aligns the item to the right in the grid */
-  text-align: right;   /* Aligns the content inside to the right */
-}
-
-.grid-container > .item5 {
-  font-size: 0.6em;
-  margin: 0px;
-  padding: 15px 0 8px 0;
-  align-items: ;
-}
-
-.item3 article {
-    font-size: 0.9em;
-    padding: 10px 20px;
-    margin: 0 auto 10px auto;
-    max-width: 500px;
-    background: none; /* Remove background */
-    border-radius: 20px; /* Remove border radius if not needed */
-}
-
-.item3 button {
-  background-color: rgb(185, 186, 214);
-    font-size: 0.4em; /* Inherit from .contact-section */
-    padding: 4px 10px;
-    border: none;
-    border-radius: 15px;
-    font-weight: bold;
-    color: #000000;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.item3 button:hover {
-    background: rgba(140, 91, 200, 0.8);
-}
-
-.item3 article h2 {
-    font-size: 1em;
-    margin-bottom: 6px;
-}
-
-.item3 article p {
-    font-size: 0.7em;
-    margin: 0;
-}
-
-.item3 p {
-    font-size: 0.5em;
-    margin: 3px 0;
-   
-}
-
-@media (max-width: 768px) {
-    main {
-        flex-direction: column;
-    }
-
-    aside {
-        width: 100%;
-        margin-top: 20px;
-    }
-}
-
-.contact-section {
-    margin-top: 20px;
-    padding: 8px 6px;
-    border-radius: 8px;
-    max-width: 180px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 0.65em; /* Reduce overall font size */
-}
-
-.contact-section h2 {
-    font-size: 0.9em;
-    margin-bottom: 4px;
-}
-
-.contact-section label {
-    font-size: 0.7em; /* Inherit from .contact-section, keep labels readable */
-    display: block;
-    margin-top: 4px;
-}
-
-.contact-section input,
-.contact-section textarea {
-    width: 100%;
-    font-size: 0.7em; /* Inherit from .contact-section */
-    margin-bottom: 6px;
-    padding: 3px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-.contact-section button {
-  background-color: rgb(185, 186, 214);
-    font-size: 0.6em; /* Inherit from .contact-section */
-    padding: 4px 10px;
-    border: none;
-    border-radius: 15px;
-    
-    color: #000000;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.contact-section button:hover {
-    background: rgba(140, 91, 200, 0.8);
-}
-
-.item7 {
-    
-    padding: 8px 6px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
-    max-width: 180px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 0.65em;
-}
-
-.item6{
-  =
-    padding: 8px 6px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
-    max-width: 180px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 0.65em;
-}
-
-.item7 h2 {
-    font-size: 1em;
-    margin-bottom: 6px;
-}
-
-.item7 ul {
-  font-size: 0.5em;
-    padding-left: 18px;
-}
-
-.item7 li {
-    margin-bottom: 4px;
-}
-
-body,
-.grid-container,
-.grid-container > div,
-.grid-container > div h1,
-.grid-container > div h2,
-.grid-container > div p,
-.grid-container > div ul,
-.grid-container > div li,
-.item3 article,
-.item3 article h2,
-.item3 article p,
-.item3 p,
-.contact-section,
-.contact-section label,
-.contact-section input,
-.contact-section textarea,
-.contact-section button,
-.item7,
-.item7 h2,
-.item7 ul,
-.item7 li,
-footer,
-footer p,
-footer a {
-    font-weight: bold;
-}
-
-/* Hamburger menu styles (hidden by default) */
-.hamburger {
-    display: none;
-    width: 32px;
-    height: 32px;
-    flex-direction: column;
+  displpay: flex;
+  flex-direction: column;
+  text-align: center;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    margin: 10px;
-    z-index: 1001;
-    background: none;
-    border: none;
 }
-.hamburger span {
-    display: block;
-    width: 24px;
-    height: 3px;
-    margin: 4px 0;
-    background: #222;
-    border-radius: 2px;
-    transition: 0.3s;
+#open-sidebar-button {
+  display: none;
+  background: none;
+  border: none;
+  padding: 1em;
+  margin-right: auto;
+  cursor: pointer;
 }
 
-/* Responsive navigation */
-@media (max-width: 768px) {
-    .item2 nav ul {
-        display: none;
-        flex-direction: column;
-        background: rgba(255,255,255,0.95);
-        position: absolute;
-        top: 50px;
-        left: 10px;
-        right: 10px;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-        padding: 10px 0;
-        z-index: 1000;
-    }
-    .item2 nav ul.active {
-        display: flex;
-    }
-    .hamburger {
-        display: flex;
-    }
-    .item2 {
-        position: relative;
-    }
+#close-sidebar-button {
+  display: none;
+  background: none;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
 }
+
+.aboutme{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 99vw;
+  height: 99vh;
+  background-image: url("59002467-cute-dog-wallpaper-4k-cute-cat-cute.jpg");
+  opacity: 0.8;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.aboutme > #box {
+    padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  text-align: center;
+}
+
+
+.project{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 99vw;
+  height: 99vh;
+  background-image: url("59002467-cute-dog-wallpaper-4k-cute-cat-cute.jpg");
+  opacity: 0.8;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.project > #projectbox {
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  text-align: center;
+}
+
+
+
+@media (max-width: 487px) {
+   
+
+.grid-container{
+display: grid;
+  grid-template-areas: 
+    "menu header"
+    "main main"
+    "left left"
+    "links links"
+    "right right"
+    "footer footer";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  width:100vw;
+  height: 100vh;
+  gap: 10px;
+ 
+  background-repeat: repeat-y;
+     background-size: autofill;
+    overflow-y: auto;}
+
+.grid-container > .item1 {
+  displpay: flex;
+  font-size: 0.6em;
+  background-color: aliceblue;
+  flex-direction: column;
+  text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+#aboutme{
+align-self: center;
+align-items: stretch;
+  display: flex;
+  gap: 10px;
+  padding: 2%;
+}
+
+.grid-container > .project{
+  display: flex;
+align-self: center;
+align-items: auto;
+  gap: 10px;
+  padding: 2%;
+}
+
+
+.grid-container > .item2 {
+  displpay: flex;
+  background-color: aliceblue;
+  flex-direction: column;
+  text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+
+#mainNav{
+    position: fixed;
+    top: 0;
+    left: -15em;
+    width: min(15 em, 100%);
+    z-index: 0;
+    border-rigth:1px solid var(--hover-colour);
+    background-color: aliceblue;
+    transition: left 0.3s ease-in-out;
+    padding: 1em;
+
+}
+
+
+#mainNav.show{
+    left: 0;
+}
+
+
+#open-sidebar-button, #close-sidebar-button {
+        display: block;
+ }
+
+}
+

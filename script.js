@@ -1,3 +1,13 @@
+var navBar = document.getElementById('mainNav');
+function openSidebar(){
+    navBar.classList.toggle('show');
+   
+}
+function closeSidebar(){
+    navBar.classList.remove('show');  
+}
+
+
 function addReview(){
 var userInput = document.getElementById('userInput');
 document.getElementById('review').innerHTML += '<p>' + userInput.value + '</p>';
@@ -55,4 +65,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-// Accessibility enhancements for the contact form
+
